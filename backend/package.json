@@ -1,0 +1,31 @@
+{
+  "name": "nasa-explorer-app-backend",
+  "version": "1.0.0",
+  "description": "Node.js Express backend for NASA Open APIs",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "NODE_ENV=development nodemon src/server.js",
+    "test": "NODE_ENV=test mocha --recursive src/tests/**/*.test.js",
+    "test:unit": "NODE_ENV=test mocha src/tests/unit/**/*.test.js",
+    "test:integration": "NODE_ENV=test mocha src/tests/integration/**/*.test.js"
+  },
+  "keywords": [],
+  "author": "Chris Imoni",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.10.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.0",
+    "express": "^4.21.2",
+    "express-async-errors": "^3.1.1",
+    "helmet": "^8.1.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "chai": "^5.2.1",
+    "mocha": "^11.7.1",
+    "sinon": "^21.0.0",
+    "supertest": "^7.1.3"
+  }
+}
