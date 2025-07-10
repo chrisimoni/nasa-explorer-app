@@ -5,10 +5,10 @@
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
-    "dev": "NODE_ENV=development nodemon src/server.js",
-    "test": "NODE_ENV=test mocha --recursive src/tests/**/*.test.js",
-    "test:unit": "NODE_ENV=test mocha src/tests/unit/**/*.test.js",
-    "test:integration": "NODE_ENV=test mocha src/tests/integration/**/*.test.js"
+    "dev": "cross-env NODE_ENV=development nodemon src/server.js",
+    "test": "cross-env NODE_ENV=test mocha --recursive src/tests/**/*.test.js",
+    "test:unit": "cross-env NODE_ENV=test mocha src/tests/unit/**/*.test.js",
+    "test:integration": "cross-env NODE_ENV=test mocha src/tests/integration/**/*.test.js"
   },
   "keywords": [],
   "author": "Chris Imoni",
@@ -24,7 +24,9 @@
   },
   "devDependencies": {
     "chai": "^5.2.1",
+    "cross-env": "^7.0.3",
     "mocha": "^11.7.1",
+    "nodemon": "^3.1.10",
     "sinon": "^21.0.0",
     "supertest": "^7.1.3"
   }
