@@ -1,0 +1,107 @@
+/* ALWAYS IMPORT ORIGINAL LIBRARY STYLES FIRST */
+@import "react-datepicker/dist/react-datepicker.css";
+
+/* Then Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- General DatePicker Container Styles --- */
+.react-datepicker-popper {
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+.react-datepicker {
+  font-family: theme("fontFamily.sans"); /* Use our body font */
+  border: 1px solid theme("colors.space.600");
+  background-color: theme(
+    "colors.space.800"
+  ); /* Dark background for the calendar */
+  color: theme("colors.starlight.100"); /* Light text for dates */
+  border-radius: theme("borderRadius.lg"); /* Rounded corners */
+  box-shadow: theme("boxShadow.xl"); /* Larger shadow for premium feel */
+  overflow: hidden; /* Ensures rounded corners are respected */
+}
+
+/* --- Header (Month/Year Navigation) --- */
+.react-datepicker__header {
+  background-color: theme(
+    "colors.space.700"
+  ); /* Slightly lighter dark for header */
+  border-bottom: 1px solid theme("colors.space.600");
+  padding-top: theme("spacing.3");
+  padding-bottom: theme("spacing.2");
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name {
+  color: theme(
+    "colors.nebula.300"
+  ); /* Accent color for month/year and day names */
+  font-weight: theme("fontWeight.semibold");
+}
+
+.react-datepicker__navigation--previous,
+.react-datepicker__navigation--next {
+  top: theme("spacing.4");
+  border-color: theme("colors.starlight.100"); /* Arrows color */
+}
+.react-datepicker__navigation--previous:hover,
+.react-datepicker__navigation--next:hover {
+  border-color: theme("colors.nebula.500");
+}
+.react-datepicker__navigation-icon::before {
+  border-color: theme("colors.starlight.100"); /* For the actual arrow icons */
+}
+
+/* --- Days Grid --- */
+.react-datepicker__month-container {
+  padding: theme("spacing.4");
+}
+
+.react-datepicker__day {
+  color: theme("colors.starlight.100"); /* Default day color */
+  margin: theme("spacing[0.5]"); /* Corrected syntax for decimal spacing */
+  width: theme("spacing.8"); /* Fixed width for day cells */
+  height: theme("spacing.8"); /* Fixed height for day cells */
+  line-height: theme("spacing.8"); /* Center text vertically */
+  border-radius: theme("borderRadius.md"); /* Slightly rounded day cells */
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.react-datepicker__day:hover {
+  background-color: theme("colors.space.600"); /* Hover background */
+  color: theme("colors.nebula.300"); /* Hover text color */
+}
+
+/* --- Selected Day --- */
+.react-datepicker__day--selected,
+.react-datepicker__day--selected:hover {
+  background-color: theme("colors.nebula.500"); /* Selected day background */
+  color: theme("colors.starlight.50"); /* Corrected: uses .50 for starlight */
+  font-weight: theme("fontWeight.bold");
+}
+
+/* --- Today's Day --- */
+.react-datepicker__day--today {
+  background-color: theme("colors.comet.700"); /* Today's day background */
+  color: theme("colors.starlight.50"); /* Corrected: uses .50 for starlight */
+  font-weight: theme("fontWeight.bold");
+}
+
+/* --- Other Month Days (faded) --- */
+.react-datepicker__day--outside-month {
+  color: theme("colors.starlight.200");
+  opacity: 0.4; /* Slightly faded */
+}
+
+/* --- Disabled Days --- */
+.react-datepicker__day--disabled {
+  color: theme("colors.starlight.200"); /* Corrected: using existing shade */
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.react-datepicker__day--disabled:hover {
+  background-color: transparent;
+  color: theme("colors.starlight.200"); /* Corrected: using existing shade */
+}

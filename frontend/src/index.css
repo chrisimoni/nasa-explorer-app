@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global base styles */
+body {
+  /* REMOVE THE BACKGROUND FROM HERE */
+  /* background: radial-gradient(
+    ellipse at bottom,
+    theme("colors.space.800") 0%,
+    theme("colors.space.900") 100%
+  ); */
+  color: theme("colors.starlight.100"); /* Light text color */
+  font-family: theme("fontFamily.sans"); /* Apply the Inter font by default */
+  overflow-x: hidden; /* Prevent horizontal scroll due to potential background effects */
+  min-height: 100vh; /* Ensure body takes full viewport height */
+  display: flex;
+  flex-direction: column;
+  /* Important: no specific z-index here */
+}
+
+/* Apply the heading font to h1-h6 elements automatically */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: theme("fontFamily.heading");
+}
+
+/* Basic link styling to use accent colors */
+a {
+  color: theme("colors.nebula.DEFAULT");
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: theme("colors.comet.DEFAULT");
+}
+
+/* Ensure #root takes full height for proper layout stretching */
+#root {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Add styles for the cosmic-background container */
+.cosmic-background {
+  position: fixed; /* Fixes it to the viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* Ensures particles don't show outside the viewport */
+  z-index: -1; /* Puts it behind all content */
+  pointer-events: none; /* Allows clicks to pass through to content */
+  background: radial-gradient(
+    ellipse at bottom,
+    theme("colors.space.800") 0%,
+    theme("colors.space.900") 100%
+  );
+}
