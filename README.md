@@ -104,7 +104,6 @@ Follow these steps to set up and run the NASA Explorer App locally.
 
 ```bash
 git clone https://github.com/chrisimoni/nasa-explorer-app
-cd nasa-explorer-app
 ```
 
 ---
