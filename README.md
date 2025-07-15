@@ -220,7 +220,6 @@ Open your browser at:
 
 - View daily NASA images and videos
 - Pick specific dates to explore historical APODs
-- Click on a thumbnail to view media and description
 
 ---
 
