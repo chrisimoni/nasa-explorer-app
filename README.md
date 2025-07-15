@@ -127,7 +127,7 @@ cp .env.sample .env
 Edit the `.env` file with your NASA API key from [https://api.nasa.gov](https://api.nasa.gov):
 
 ```env
-PORT=5000
+PORT=3000
 NASA_API_KEY=YOUR_NASA_API_KEY_HERE
 NASA_BASE_URL=https://api.nasa.gov
 NODE_ENV=development
@@ -148,7 +148,7 @@ cp .env.sample .env
 Update the API URL if needed:
 
 ```env
-VITE_BACKEND_API_URL=http://localhost:5000/api/v1
+BACKEND_API_URL=http://localhost:3000/api/v1
 ```
 
 ---
@@ -164,9 +164,18 @@ npm run dev
 ```
 
 The backend server should now be running at:  
-[http://localhost:5000](http://localhost:5000)
+[http://localhost:3000](http://localhost:3000)
 
----
+## Running Tests
+
+To run unit and integration tests for the backend:
+
+```bash
+cd backend
+npm run test
+```
+
+This will execute all test suites and display the results in your terminal.
 
 ## Frontend Setup
 

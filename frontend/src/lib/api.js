@@ -1,7 +1,7 @@
 // Define your backend API base URL
 // For local development, it's usually http://localhost:PORT
 const API_BASE_URL =
-  import.meta.env.VITE_BACKEND_API_URL || "http://localhost:3000/api/v1";
+  import.meta.env.BACKEND_API_URL || "http://localhost:3000/api/v1";
 
 // Helper function for making GET requests
 async function get(path, params = {}) {
