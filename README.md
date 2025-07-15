@@ -83,7 +83,7 @@ The NASA Explorer App is a full-stack web application that visualizes exciting d
 ## Backend API Documentation
 
 📮 Postman collection with API documentation:  
-[**View in Postman**](YOUR_POSTMAN_DOCUMENTATION_LINK_HERE)
+[**View in Postman**](https://documenter.getpostman.com/view/7330864/2sB34hGg3G)
 
 ---
 
